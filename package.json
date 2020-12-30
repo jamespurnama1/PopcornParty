@@ -24,5 +24,8 @@
     "socket.io",
     "node.js",
     "groupchat"
-  ]
+  ],
+  "scripts": {
+    "start": "node server.js"
+  },
 }
