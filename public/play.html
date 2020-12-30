@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<head>
+ 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/play.css">
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/play.js"></script>
+	<title></title>
+	<audio id="notification">
+		<source src="notification.ogg" type="audio/ogg">
+		<source src="notification.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="sendAudio">
+		<source src="send.ogg" type="audio/ogg">
+		<source src="send.mp3" type="audio/mpeg">
+	</audio>
+</head>
+<html>
+	<div class="heading">
+		<h1>Popcorn Party</h1>
+		<h3>loading...</h3>
+		<button id='shareb' onclick="shareLink()">Share</button>
+	</div>
+<body onload="videoSetup()"> 
+<div class="vidClass">
+	<video src="" width="1920" height="1080" id="video" preload="true" autobuffer controls onpause="PauseVideo()" onplay="PlayVideo()">
+		<track id="track" label="English" kind="captions" srclang="en-US" src="" default>
+	</video>
+</div>
+<button id="hide" data-toggle="tooltip" title="Bigger video and minimize chat." onclick="toggleChat();">Hide Chat ></button>
+<div id="chatter" class="chat">
+	<ul class="list-group">
+	</ul>
+	<div id="response">
+		<input type="text" placeholder="Type your message..." id="message" class="textbox" name="message" onkeydown = "if (event.keyCode == 13)document.getElementById('Sender').click()"></input>
+		<button id="Sender" onclick="sendMessage();" class="messageSubmit">Send</button>
+	</div>
+</div>
+
+<div id='tools'>
+	<button id='syncb'><a href="javascript:syncUp();" data-toggle="tooltip" title="Seeking the timeline will make the video asynchronous. This will allow everyone else to follow your video current duration.">Sync Video Playback</a></button>
+	<input type="submit" class="mute" id="stopNotification" value="Mute Notifications" onClick="stopNotification()" data-toggle="tooltip" title="Toggle mute chat notifications and warnings."></input>
+</div>
+</body> 
+<script>
+
+</script>
+</html>

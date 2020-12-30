@@ -1,0 +1,129 @@
+The server is running on 1818
+Started on 2020/12/30 13:43:24
+--------------------------------------------
+User Jemi Joined Room : Pacca
+Video Played In Pacca initiated by Jemi
+true count
+debounced count
+Video Paused In Pacca initiated by Jemi
+Video Played In Pacca initiated by Jemi
+true count
+debounced count
+Video Paused In Pacca initiated by Jemi
+User tessa Joined Room : Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Video Played In Pacca initiated by tessa
+Video Played In Pacca initiated by Jemi
+true count
+debounced count
+true count
+debounced count
+Syncing Playback in Pacca initiated by tessa
+Syncing Playback in Pacca initiated by tessa
+Video Paused In Pacca initiated by tessa
+Video Paused In Pacca initiated by Jemi
+Video Played In Pacca initiated by tessa
+Video Played In Pacca initiated by Jemi
+true count
+debounced count
+true count
+debounced count
+User Jemi Joined Room : Pacca
+Message sent in Pacca
+Video Paused In Pacca initiated by tessa
+User Jemi Joined Room : usdsad
+User Jemi Joined Room : Pacca
+Video Played In Pacca initiated by Jemi
+Video Played In Pacca initiated by tessa
+true count
+debounced count
+true count
+debounced count
+Syncing Playback in Pacca initiated by tessa
+Syncing Playback in Pacca initiated by tessa
+Syncing Playback in Pacca initiated by tessa
+Syncing Playback in Pacca initiated by tessa
+Syncing Playback in Pacca initiated by tessa
+Syncing Playback in Pacca initiated by tessa
+Video Paused In Pacca initiated by tessa
+Video Paused In Pacca initiated by Jemi
+User Jemi Joined Room : Pacca
+Video Played In Pacca initiated by Jemi
+Video Played In Pacca initiated by tessa
+true count
+debounced count
+true count
+debounced count
+Syncing Playback in Pacca initiated by Jemi
+Syncing Playback in Pacca initiated by Jemi
+Syncing Playback in Pacca initiated by Jemi
+Video Paused In Pacca initiated by Jemi
+Video Paused In Pacca initiated by tessa
+Video Played In Pacca initiated by Jemi
+Video Played In Pacca initiated by tessa
+true count
+debounced count
+true count
+debounced count
+Syncing Playback in Pacca initiated by Jemi
+Syncing Playback in Pacca initiated by Jemi
+Syncing Playback in Pacca initiated by Jemi
+Syncing Playback in Pacca initiated by Jemi
+Syncing Playback in Pacca initiated by Jemi
+Syncing Playback in Pacca initiated by Jemi
+Syncing Playback in Pacca initiated by Jemi
+Syncing Playback in Pacca initiated by Jemi
+Syncing Playback in Pacca initiated by Jemi
+Syncing Playback in Pacca initiated by Jemi
+Video Paused In Pacca initiated by tessa
+Video Paused In Pacca initiated by Jemi
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+User Jemi Joined Room : jnjn
+User tessa Joined Room : Pacca
+Message sent in Pacca
+Syncing Playback in jnjn initiated by Jemi
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+User Jessica Tampubuolon Joined Room : Pacca
+Message sent in jnjn
+Message sent in jnjn
+Message sent in jnjn
+Message sent in Pacca
+Message sent in jnjn
+Message sent in jnjn
+Message sent in jnjn
+Message sent in Pacca
+Message sent in Pacca
+Message sent in jnjn
+Message sent in jnjn
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+User Jemi Joined Room : Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Message sent in Pacca
+Syncing Playback in Pacca initiated by Jemi

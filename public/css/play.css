@@ -1,0 +1,257 @@
+html{ 
+	margin: 0; padding: 0; 
+}
+
+	body {
+		display: flex;
+		align-items: center;
+		background-color: black;
+		overflow: hidden;
+		height: 100vh;
+	}
+	
+	.buttq {
+		display: block;
+		width: 200px;
+		height: 40px;
+		background: white;
+		padding: 10px;
+		text-align: center;
+		border-radius: 5px;
+		color: grey;
+		font-weight: bold;
+	}
+	
+	#hide {
+		position: absolute;
+		top: 25px;
+		right: 50px;
+		color: white;
+		background-color: #777777;
+		border: 0;
+		padding: 5px 20px;
+		border-radius: 5px/5px;
+		z-index: 5;
+		opacity: 25%;
+		transition: opacity .5s ease;
+		cursor: pointer;
+	}
+
+	#hide:hover {
+		opacity: 100%;
+	}
+
+.chat {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	width: 20vw;
+	height: 100vh;
+	padding: 40px 0;
+	overflow: hidden;
+	background: rgba(0,0,0,0.5);
+	/* background: linear-gradient(90deg, rgba(0,0,0,0.25) 0%, rgba(68,46,161,0.25) 100%); */
+	transition: all .5s ease;
+}
+
+.chat:before {
+	content: '';
+	position: absolute;
+	width: 20vw;
+	height: 100vh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(68,46,161,1) 100%);
+	z-index: -1;
+}
+
+.chat:hover {
+	background: rgba(0,0,0,0);
+}
+
+#response {
+	height: 10%;
+	white-space: nowrap;
+	width: 100%;
+	display: grid;
+}
+
+ul {
+	position: relative;
+	list-style-type: none;
+	height: calc(100% - 6px);
+	width: 100%;
+	top: 3vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.list-group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 80px;
+}
+	
+.list-group-item, .list-group-item:first-child, .list-group-item:last-child {
+	border-radius: 15px/15px;
+	width: max-content;
+	padding: 5px 10px;
+	margin: 5px;
+	background-color: rgb(133, 114, 216);
+	color: white;
+	border: 0;
+	margin-left: auto;
+	max-width: 100%;
+	word-break: break-all;
+}
+
+h1, h3{
+	color: white;
+	margin: 0;
+}
+
+.heading {
+	position: absolute;
+	margin-left: 3vw;
+	top: 4%;
+}
+
+		
+.messageSubmit {
+	border-radius: 15px/15px;
+	border: 0;
+	color: white;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 12px;
+	text-decoration: none;
+	width: 100%;
+	background-color: rgba(68,46,161,1);
+	transition: all .5s ease;
+}
+
+.messageSubmit:hover {
+	background-color: white;
+	color: rgba(68,46,161,1);
+}
+
+
+.textbox {
+	width: 100%;
+	min-height: 36px;
+	font-weight: normal;
+	border: 0;
+	padding: 5px;
+	padding-right: 0;
+	font-size: 16px;
+	background-color: #545454;
+	color: white;
+	margin-bottom: 10px;
+}
+		
+.glowing-border:focus { 
+	outline: none;
+	border-color: rgba(68,46,161,1);
+	box-shadow: 0 0 10px rgba(68,46,161,1);
+}
+	  
+.headerForChat{
+	position: absolute;
+	top: 10px;
+	right: 60px;
+}
+
+.footerForChat{
+	position: absolute;
+	top: 670px;
+	right: 60px;
+}
+
+.footerForChat2{
+		position: absolute;
+		top: 690px;
+		right: 60px;
+}
+
+.vidClass {
+	width: 80%;
+	resize: both;
+	margin: auto 0;
+	height: auto;
+	transition: width .5s ease;
+	display: flex;
+}
+
+#video {
+	transition: width .5s ease;
+	width: 90%;
+	height: auto;
+	margin: auto 0;
+	margin-left: 3vw;
+	max-height: 80vh;
+}
+
+#tools {
+	position: absolute;
+	left: 3%;
+	bottom: 3%;
+	display: flex;
+}
+
+.mute {
+	border-radius: 15px/15px;
+	border: 0;
+	color: black;
+	background-color:lightgray;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 12px;
+	text-decoration: none;
+	margin: 0 15px;
+	transition: all .5s ease;
+}
+
+.mute:hover {
+	filter: invert();
+}
+
+#shareb {
+	color:white;
+	background-color: rgba(68,46,161,1);
+	border-radius: 15px/15px;
+	border: 0;
+	padding: 6px 12px;
+	margin-top: 10px;
+}
+
+#shareb:hover {
+	color: rgba(68,46,161,1);
+	background-color:white;
+}
+
+#syncb {
+	border-radius: 15px/15px;
+	background-color: rgb(255, 255, 98);
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 12px;
+	border: 0;
+}
+
+#syncb a {
+	color:black;
+}
+
+#syncb:hover {
+	background-color: rgb(255, 122, 70);
+}
+
+#syncb:hover a {
+	color: white;
+	text-decoration: none;
+}

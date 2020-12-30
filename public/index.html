@@ -1,0 +1,184 @@
+
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title>PopcornParty</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id='overlay'></div>
+    <div class="header">
+      <h1>Welcome to PopcornParty</h1>
+      <p>please enter a username.</p>
+    </div>
+  <form onsubmit="return false">
+    <input required type="text" class="button" id="name" name="name" placeholder="Your name">
+		<input required type="text" class="button" id="room" name="room" placeholder="Room ID">
+		<input required type="text" class="button" id="url" name="url" placeholder="URL of the Movie">
+    <input type="text" class="button" id="sub" name="sub" placeholder="Subtitle URL">
+    <input type="submit" class="button" id="submit" onclick="myFunction()" value="Click here!">
+  </form>
+  </body>
+</html>
+<style>
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95vw;
+    height: 93vh;
+    overflow: hidden;
+    padding: 35px;
+    margin: 0;
+    background-image: url('https://i.pinimg.com/originals/49/03/a3/4903a3afbb583f08ba69cfd96e87cf2b.gif');
+  }
+
+  #overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    opacity: 50%;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1
+  }
+
+  h1 {
+    font-size: 25px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  form {
+    margin: 5%;
+  }
+
+  input {
+    margin: 5px 0;
+    width: 75%;
+    background: #FDFCFB;
+    font-family: inherit;
+    color: #737373;
+    letter-spacing: 1px;
+    text-indent: 5%;
+    border-radius: 5px/5px !important;
+  }
+
+  input:focus {
+    outline: none;
+	  border-color: rgba(68,46,161,1);
+	  box-shadow: 0 0 10px rgba(68,46,161,1);
+  }
+
+  #submit {
+    border-radius: 5px/5px;
+    border-color: rgba(68,46,161,1);
+    background-color: rgba(68,46,161,1);
+	  box-shadow: 0 0 35px rgba(68,46,161,1);
+  }
+
+  #submit:hover {
+    color: rgba(68,46,161,1);
+    background-color: white;
+  }
+
+  @media screen and (max-width: 600px) {
+    body {
+      flex-direction: column;
+    }
+  }
+</style>
+<script>
+window.onload = function() {
+  function querySt(ji) {
+    hu = window.location.search.substring(1);
+    gy = hu.split("&");
+
+    for (i = 0; i < gy.length; i++) {
+      ft = gy[i].split("=");
+      if (ft[0] == ji) {
+        return ft[1];
+      }
+    }
+  }
+
+  const urlEL = document.getElementById('url');
+  const subEL = document.getElementById('sub');
+  const roomEL = document.getElementById('room');
+
+  if(window.location.href.toString() !== window.location.origin.toString() + '/') {
+    let typeURL = decodeURIComponent(querySt('url'));
+    urlEL.value = typeURL;
+    if(window.location.href.includes('&sub=')){
+      let typeSub = decodeURIComponent(querySt('sub'));
+      subEL.value = typeSub;
+      let typeRoom = decodeURIComponent(querySt('room'));
+      roomEL.value = typeRoom;
+    }
+  };
+
+  urlEL.addEventListener('input', updateValue);
+  subEL.addEventListener('input', updateValue);
+  roomEL.addEventListener('input', updateValue);
+  
+  let sub64,
+  room64,
+  url64;
+
+  function checkOther() {
+
+    if(subEL.value) {
+      sub64 = '&sub=' + encodeURIComponent(subEL.value);
+    } else if (!subEL.value) {
+      sub64 = '';
+    }
+
+    if(roomEL.value) {
+      room64 = '&room=' + encodeURIComponent(roomEL.value);
+    } else if(!roomEl.value) {
+      room64 = '';
+    }
+
+    if(urlEL.value) {
+      url64 = '/?url=' + encodeURIComponent(urlEL.value);
+    } else if(!urlEL.value) {
+      url64 = '';
+    }
+  };
+
+  function updateValue() {
+    checkOther();
+    if(url64) {
+      window.history.replaceState(null, 'url', url64 + sub64 + room64);
+    } else {
+      window.history.replaceState(null, 'url', '/');
+    }
+  }
+};
+
+function myFunction() {
+  console.log(window.location.href);
+  let Name = document.getElementById('name').value
+      roomId = document.getElementById('room').value
+      url = document.getElementById('url').value
+      sub = document.getElementById('sub').value;
+      share = window.location.href;
+
+  if(Name) {
+    localStorage.setItem("name", Name);
+    localStorage.setItem("roomId", roomId);
+    localStorage.setItem("url", url);
+    localStorage.setItem("sub", sub);
+    localStorage.setItem("share", share);
+    window.location.href = "play.html";
+  }
+}
+</script>
